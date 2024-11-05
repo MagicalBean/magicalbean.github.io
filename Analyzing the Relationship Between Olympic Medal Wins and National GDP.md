@@ -1,4 +1,4 @@
-# Analyzing the Relationship Between Olympic Medal Wins and National GDP
+# Analyzing the Relationship Between Olympic Medal Counts and National GDP
 
 How does a country's GDP correlate with its success in winning Olympic medals? Can we identify trends to suggest the influence of economic resources on Olympic performance, and to what extent can we use GDP to predict Olympic medal outcomes?
 
@@ -12,7 +12,7 @@ I grabbed Olympic Medals data from Kaggle here:
 * [Summer Olympics Medals](https://www.kaggle.com/datasets/stefanydeoliveira/summer-olympics-medals-1896-2024/data)
 
 
-```python
+```
 # Download olympics dataset from kaggle
 !kaggle datasets download -d stefanydeoliveira/summer-olympics-medals-1896-2024
 
@@ -276,8 +276,10 @@ plt.tight_layout()
 plt.show()
 ```
 
-This time I chose to graph the same countries, along with a best fit line for the total dataset. I removed the 1984 Olympics due to the boycotting, which is separate from the trend I am trying to determine. I also added the R<sup>2</sup> value in the legend for more accurate comparisons. While not all of the best fit lines are incredible, they are substantially better then the overall best fit line.
+This time I chose to graph the same countries, along with a best fit line for the total dataset. I removed the 1984 Olympics due to the boycotting in LA, which is separate from the trend I am trying to determine. There is quite a lot of political influence on the medal counts, but for the scope of this I have chosen to focus on GDP's impact of the results more exclusively.
 
-This shows an example of the Simpson's paradox, where a trend can show in a subset of the data, but when looking at the entire dataset the trend disappears. There must be some confounding variable, that overwhelmed GDP's importance. In this case it appears as if a countries GDP is not enough on its own to predict Olympic outcomes. The in-country trends suggest that GDP does have impact on their scores, but it must be outweighed by other factors.
+I added the R<sup>2</sup> value in the legend for more accurate comparisons. While not all of the best fit lines are incredible, they are substantially better then the overall best fit line.
+
+This shows an example of the Simpson's paradox, where a trend can show in a subset of the data, but when looking at the entire dataset the trend disappears. This "paradox" is characterized by a confounding variable, something that overwhelmed GDP's importance to medal counts. In this case it appears as if a countries GDP is not enough on its own to predict Olympic outcomes. The in-country trends suggest that GDP does have impact on their scores, but it must be outweighed by other factors.
 
 If a country has some Olympic training system setup, having more money will make that system better, but it won't necessarily change how that system might compare to another country with a more strategic system.
