@@ -1,8 +1,8 @@
-#Analyzing the Relationship Between Olympic Medal Counts and National GDP
+# Analyzing the Relationship Between Olympic Medal Counts and National GDP
 
 How does a country's GDP correlate with its success in winning Olympic medals? Can we identify trends to suggest the influence of economic resources on Olympic performance, and to what extent can we use GDP to predict Olympic medal outcomes?
 
-##The Data:
+## The Data:
 
 I grabbed Gross Domestic Product (GDP) data from the World Bank Group. The Purchasing Power Parity (PPP) dataset is better for cross country comparisons since it converts the data into international currency, but the GDP per capita dataset has a larger time coverage, so I grabbed both.
 * [GDP Per Capita](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD)
