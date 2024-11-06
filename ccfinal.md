@@ -1,8 +1,8 @@
-# Analyzing the Relationship Between Olympic Medal Counts and National GDP
+#Analyzing the Relationship Between Olympic Medal Counts and National GDP
 
 How does a country's GDP correlate with its success in winning Olympic medals? Can we identify trends to suggest the influence of economic resources on Olympic performance, and to what extent can we use GDP to predict Olympic medal outcomes?
 
-## The Data:
+##The Data:
 
 I grabbed Gross Domestic Product (GDP) data from the World Bank Group. The Purchasing Power Parity (PPP) dataset is better for cross country comparisons since it converts the data into international currency, but the GDP per capita dataset has a larger time coverage, so I grabbed both.
 * [GDP Per Capita](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD)
@@ -92,7 +92,7 @@ pop = pop.rename(columns={'Country Name': 'Team'})
 pop_by_noc = olympic_teams.merge(pop, on='Team').drop(['Team'], axis=1) # dataset w/ GDP matched with NOC
 ```
 
-The GDP data is organized by country, but I want to analyze Olympic teams by their NOC, so I had to create dataframes that matched the NOC with its corresponding GDP data.
+The GDP data is organized by country, but I want to analyize Olympic teams by their NOC, so I had to create dataframes that matched the NOC with its corresponding GDP data.
 
 ## Analysis:
 
@@ -146,7 +146,13 @@ plt.tight_layout()
 plt.show()
 ```
 
-I graphed the total medal counts as well as the medal counts per capita against the GDP per Capita, PPP to see if there was any correlation, but I don't really see much. The United States and Australia do notably better then any other team when it comes to swimming, and while they have higher GDPs, there really doesn't seem to be much of a trend behind it.
+
+    
+![png](ccfinal_files/ccfinal_11_0.png)
+    
+
+
+I graphed the total medal counts as well as the medal counts per capita againt the GDP per Capita, PPP to see if there was any correlation, but I don't really see much. The United States and Australia do notably better then any other team when it comes to swimming, and while they have higher GDPs, there really doesn't seem to be much of a trend behind it.
 
 To me, comparing medals per capita didn't reveal anything new about the Olympic data, mostly only adjusting the points slightly on the vertical axis. I credit this mostly to the majority of a population having a comparatively small impact on the Olympic athletes.
 
@@ -213,6 +219,11 @@ plt.show()
 ```
 
 
+    
+![png](ccfinal_files/ccfinal_13_0.png)
+    
+
+
 There is a much stronger correlation between GDP and Medal counts here. All of graphed countries score more medals as their GDP increases, except Germany, which shows an event that deserves a research question of its own.
 
 
@@ -263,9 +274,9 @@ m, b, r, _, _ = stats.linregress(countries['GDP'], countries['Total']) # calcula
 yfit = list(map(lambda x: m * x + b, countries['GDP']))
 plt.plot(countries['GDP'], yfit, color='black')
 
-handles = [mpatches.Patch(color=color, label=f"{noc}, R^2: {round(error_values[noc]**2, 2)}") for noc, color in noc_colors.items()] # draw legend
+handles = [mpatches.Patch(color=color, label=f"{noc}, R$^2$: {round(error_values[noc]**2, 2)}") for noc, color in noc_colors.items()] # draw legend
 handles.append(mpatches.Patch(color='black', label=f"Best Fit Line, {round(r**2, 2)}"))
-plt.legend(handles=handles, title='NOC', bbox_to_anchor=(1.05, 1.0), loc='upper left')
+plt.legend(handles=handles, title='NOC', bbox_to_anchor=(1.01, 1.015), loc='upper left')
 
 # plt.xscale('log')
 plt.xlabel('GDP per Capita')
@@ -276,10 +287,16 @@ plt.tight_layout()
 plt.show()
 ```
 
+
+    
+![png](ccfinal_files/ccfinal_15_0.png)
+    
+
+
 This time I chose to graph the same countries, along with a best fit line for the total dataset. I removed the 1984 Olympics due to the boycotting in LA, which is separate from the trend I am trying to determine. There is quite a lot of political influence on the medal counts, but for the scope of this I have chosen to focus on GDP's impact of the results more exclusively.
 
-I added the R<sup>2</sup> value in the legend for more accurate comparisons. While not all of the best fit lines are incredible, they are substantially better then the overall best fit line.
+I added the R2 value in the legend for more accurate comparisons. While not all of the best fit lines are incredible, they are substantially better then the overall best fit line.
 
-This shows an example of the Simpson's paradox, where a trend can show in a subset of the data, but when looking at the entire dataset the trend disappears. This "paradox" is characterized by a confounding variable, something that overwhelmed GDP's importance to medal counts. In this case it appears as if a countries GDP is not enough on its own to predict Olympic outcomes. The in-country trends suggest that GDP does have impact on their scores, but it must be outweighed by other factors.
+This shows an example of the Simpson's paradox, where a trend can show in a subset of the data, but when looking at the entire dataset the trend disappears. This “paradox” is characterized by a confounding variable, something that overwhelmed GDP's importance to medal counts. In this case it appears as if a countries GDP is not enough on its own to predict Olympic outcomes. The in-country trends suggest that GDP does have impact on their scores, but it must be outweighed by other factors.
 
 If a country has some Olympic training system setup, having more money will make that system better, but it won't necessarily change how that system might compare to another country with a more strategic system.
