@@ -1,6 +1,11 @@
 remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
+  
 minima:
   skin: auto # switch with your system settings.
-header_pages:
+  
+sass:
+  load_paths:
+    - _sass
+    - assets/css
