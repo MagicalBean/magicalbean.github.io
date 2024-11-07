@@ -1,4 +1,8 @@
-# Analyzing the Relationship Between Olympic Medal Counts and National GDP
+---
+layout: page
+title: Analyzing the Relationship Between Olympic Medal Counts and National GDP
+permalink: /ccfinal/
+---
 
 How does a country's GDP correlate with its success in winning Olympic medals? Can we identify trends to suggest the influence of economic resources on Olympic performance, and to what extent can we use GDP to predict Olympic medal outcomes?
 
