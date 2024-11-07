@@ -1,5 +1,5 @@
 @import "{{ site.theme }}";
 
-.wrapper {
-  max-width: calc(1000px + 2*30px);
+.page-content {
+  max-width: (1000px - (2 * 30px)); /* Adjust to your preferred width */
 }
