@@ -10,3 +10,30 @@ $content-width:    1000px;
 .wrapper {
   max-width: calc(1000px - (2 * 30px));
 }
+
+/* syntax highlighting for code blocks */
+.highlight {
+  background-color: #161b22; /* Dark background for code blocks */
+  color: #c9d1d9; /* Default text color */
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 5px;
+}
+
+.highlight .k { color: #ff7b72; }       /* keywords */
+.highlight .c { color: #8b949e; }       /* comments */
+.highlight .s { color: #a5d6ff; }       /* strings */
+.highlight .p { color: #c9d1d9; }       /* punctuation */
+.highlight .na { color: #d2a8ff; }      /* attributes */
+.highlight .nf { color: #79c0ff; }      /* function names */
+.highlight .nb { color: #b392f0; }      /* builtins */
+.highlight .nd { color: #d2a8ff; }      /* decorators */
+.highlight .nl { color: #58a6ff; }      /* tags or literals */
+.highlight .nn { color: #ffa657; }      /* class names */
+.highlight .no { color: #f85149; }      /* constants */
+.highlight .nc { color: #e3b341; }      /* types */
+
+code {
+  color: inherit;
+  background: none;
+}
