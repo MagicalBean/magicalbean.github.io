@@ -1,10 +1,6 @@
 ---
 ---
 
-@import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
-
 $content-width:    1000px;
 
 .wrapper {
@@ -21,6 +17,11 @@ $link-hover-color: #79c0ff;
 
 /* code */
 $code-background-color: #161b22;
+
+/* default minima styling */
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
 
 /* Sidebar or Nav background */
 .site-header, .page-header {
