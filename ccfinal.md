@@ -306,7 +306,7 @@ This shows an example of the Simpson's paradox, where a trend can show in a subs
 If a country has some Olympic training system setup, having more money will make that system better, but it won't necessarily change how that system might compare to another country with a more strategic system.
 
 <iframe
-  src="https://magicalbean.github.io/magicalbean/ccfinal_files/plotly_graph.html"
+  src="https://magicalbean.github.io/magicalbean.github.io/ccfinal_files/plotly_graph.html"
   width="100%"
   height="500px"
   frameborder="0"
