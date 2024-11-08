@@ -5,8 +5,6 @@ plugins:
 minima:
   skin: auto # switch with your system settings.
 
-title: Analyzing the Relationship Between Olympic Medal Counts and National GDP
-
 sass:
   load_paths:
     - _sass
