@@ -305,10 +305,13 @@ This shows an example of the Simpson's paradox, where a trend can show in a subs
 
 If a country has some Olympic training system setup, having more money will make that system better, but it won't necessarily change how that system might compare to another country with a more strategic system.
 
-<iframe
-  src="https://magicalbean.github.io/ccfinal_files/plotly_graph.html"
-  width="100%"
-  height="500px"
-  frameborder="0"
-  scrolling="no">
-</iframe>
+<div id="plotly-graph-container"></div>
+
+<script>
+  fetch("https://magicalbean.github.io/ccfinal_files/plotly_graph.html")
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("plotly-graph-container").innerHTML = html;
+    })
+    .catch(error => console.error("Error loading Plotly graph:", error));
+</script>
