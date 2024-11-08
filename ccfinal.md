@@ -308,10 +308,22 @@ If a country has some Olympic training system setup, having more money will make
 <div id="plotly-graph-container"></div>
 
 <script>
-  fetch("https://magicalbean.github.io/ccfinal_files/plotly_graph.html")
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById("plotly-graph-container").innerHTML = html;
-    })
-    .catch(error => console.error("Error loading Plotly graph:", error));
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch("https://magicalbean.github.io/ccfinal_files/plotly_graph.html")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.text();
+      })
+      .then(html => {
+        // Parse the HTML content as a DOM structure
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+
+        // Insert the content inside the div
+        document.getElementById("plotly-graph-container").append(...doc.body.children);
+      })
+      .catch(error => console.error("Error loading Plotly graph:", error));
+  });
 </script>
