@@ -1,27 +1,15 @@
 ---
 ---
 
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
 $content-width:    1000px;
 
 .wrapper {
   max-width: calc(1000px - (2 * 30px));
 }
-
-/* basic styling */
-$background-color: #0d1117;
-$text-color: #c9d1d9;
-
-/* links */
-$link-base-color: #58a6ff;
-$link-hover-color: #79c0ff; 
-
-/* code */
-$code-background-color: #161b22;
-
-/* default minima styling */
-@import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
 
 /* Sidebar or Nav background */
 .site-header, .page-header {
@@ -50,32 +38,6 @@ table {
 th, td {
   border: 1px solid #30363d;
   padding: 0.5em;
-}
-
-/* syntax highlighting for code blocks */
-.highlight {
-  padding: 0.5em;
-  overflow-x: auto;
-  border: 0;
-  border-radius: 1px;
-}
-
-.highlight .k { color: #ff7b72; }       /* keywords */
-.highlight .c { color: #8b949e; }       /* comments */
-.highlight .s { color: #a5d6ff; }       /* strings */
-.highlight .p { color: #c9d1d9; }       /* punctuation */
-.highlight .na { color: #d2a8ff; }      /* attributes */
-.highlight .nf { color: #79c0ff; }      /* function names */
-.highlight .nb { color: #b392f0; }      /* builtins */
-.highlight .nd { color: #d2a8ff; }      /* decorators */
-.highlight .nl { color: #58a6ff; }      /* tags or literals */
-.highlight .nn { color: #ffa657; }      /* class names */
-.highlight .no { color: #f85149; }      /* constants */
-.highlight .nc { color: #e3b341; }      /* types */
-
-code {
-  color: inherit;
-  background: none;
 }
 
 /* Hide the footer */
