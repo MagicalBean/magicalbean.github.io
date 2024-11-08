@@ -11,6 +11,71 @@ $content-width:    1000px;
   max-width: calc(1000px - (2 * 30px));
 }
 
+/* Base background and text color */
+body {
+  background-color: #0d1117; /* dark background */
+  color: #c9d1d9;            /* dark text color */
+}
+
+/* Links */
+a {
+  color: #58a6ff;            /* link color */
+}
+a:hover {
+  color: #79c0ff;            /* Hover color for links */
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  color: #c9d1d9;
+}
+
+/* Sidebar or Nav background */
+.site-header, .page-header, .post-header {
+  background-color: #161b22; /* Slightly darker for header areas */
+}
+
+/* Button Styles */
+button, .btn {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
+button:hover, .btn:hover {
+  background-color: #30363d;
+  color: #ffffff;
+}
+
+/* Borders and Lines */
+hr, .post-content hr, .page-content hr {
+  border-color: #30363d;      /* Subtle border color */
+}
+
+/* Code blocks */
+pre, code {
+  background-color: #161b22;
+  color: #c9d1d9;
+}
+
+/* Blockquote styling */
+blockquote {
+  background-color: #161b22;
+  border-left: 3px solid #30363d;
+  color: #8b949e;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+/* Table Styling */
+table {
+  background-color: #161b22;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #30363d;
+  padding: 0.5em;
+}
+
 /* syntax highlighting for code blocks */
 .highlight {
   background-color: #161b22; /* Dark background for code blocks */
