@@ -11,33 +11,35 @@ $content-width:    1000px;
   max-width: calc(1000px - (2 * 30px));
 }
 
-/* Sidebar or Nav background */
-.site-header, .page-header {
-  background-color: #161b22; /* Slightly darker for header areas */
-}
-
-/* Borders and Lines */
-hr, .post-content hr, .page-content hr {
-  border-color: #30363d;      /* Subtle border color */
-}
-
-/* Blockquote styling */
-blockquote {
-  background-color: #161b22;
-  border-left: 3px solid #30363d;
-  color: #8b949e;
-  padding: 1em;
-  margin: 1em 0;
-}
-
-/* Table Styling */
-table {
-  background-color: #161b22;
-  border-collapse: collapse;
-}
-th, td {
-  border: 1px solid #30363d;
-  padding: 0.5em;
+@media (prefers-color-scheme: dark) {
+  /* Sidebar or Nav background */
+  .site-header, .page-header {
+    background-color: #161b22; /* Slightly darker for header areas */
+  }
+  
+  /* Borders and Lines */
+  hr, .post-content hr, .page-content hr {
+    border-color: #30363d;      /* Subtle border color */
+  }
+  
+  /* Blockquote styling */
+  blockquote {
+    background-color: #161b22;
+    border-left: 3px solid #30363d;
+    color: #8b949e;
+    padding: 1em;
+    margin: 1em 0;
+  }
+  
+  /* Table Styling */
+  table {
+    background-color: #161b22;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #30363d;
+    padding: 0.5em;
+  }
 }
 
 /* Hide the footer */
